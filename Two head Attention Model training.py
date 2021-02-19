@@ -214,7 +214,7 @@ class EncoderLayer(tf.keras.Model):
     ffn_output = self.dropout2(ffn_output, training=training)
     out2 = self.layernorm2(out1 + ffn_output)  # (batch_size, input_seq_len, d_model)
 
-    return out2, weights
+    return out2, True
 
 
 
